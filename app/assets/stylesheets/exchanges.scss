@@ -1,5 +1,5 @@
 body {
-    background: image-url("/background-img.jpg") no-repeat center center fixed;
+    background: image-url("/moedas.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,11 +20,13 @@ body {
     }
   
     .subtitle{
-      color: white;
+      color: bisque;
       text-shadow: 3px 0px 3px #000000;
       font-size: 30px;
       margin-left: 10px;
       margin-right: 10px;
+      font-family: Oranienbaum;
+      font-style: oblique;
     }
   }
   

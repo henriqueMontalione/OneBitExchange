@@ -1,7 +1,6 @@
 $(document).ready ->
 
-  $('form').submit ->
-    if $('form').attr('action') == '/convert'
+  $('#amount').keyup(() ->
       $.ajax '/convert',
           type: 'GET'
           dataType: 'json'
@@ -15,3 +14,4 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
+    );  
