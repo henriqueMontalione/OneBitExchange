@@ -1,7 +1,17 @@
 $(document).ready ->
 
-  $('#amount').keyup(() ->
-      $.ajax '/convert',
+  $('#amount').keyup(() -> converter() );  
+
+  $("#icone").click(() ->
+    source = $("#source_currency").val();
+    target = $("#target_currency").val();
+    $("#source_currency").val(target);
+    $("#target_currency").val(source);
+    converter();
+  );
+  
+  converter = ->
+    $.ajax '/convert',
           type: 'GET'
           dataType: 'json'
           data: {
@@ -14,4 +24,4 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
-    );  
+  
