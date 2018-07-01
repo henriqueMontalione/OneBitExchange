@@ -1,5 +1,8 @@
 .exchange_box{
   opacity: 0.95;
+  select, p , #amount, #result{
+    font-style: oblique;
+  }
 
   .card{
     border: 0;
