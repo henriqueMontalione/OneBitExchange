@@ -6,15 +6,7 @@ RSpec.configure do |config|
       'Accept'=>'*/*'
     }).to_return(status: 200, body: '
       {
-        "status": true,
-        "currency": [
-            {
-                "currency": "USD/BRL",
-                "value": "3.41325",
-                "date": "2018-04-20 17:22:59",
-                "type": "original"
-            }
-        ]
+        "USD": "3.2571"
       }', headers: {})
   end
 end
